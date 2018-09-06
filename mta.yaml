@@ -1,0 +1,20 @@
+ID: teamcall
+_schema-version: '3.1'
+version: 0.0.1
+
+modules:
+ - name: teamcall-db
+   type: hdb
+   path: teamcall-db
+   requires:
+    - name: hdi_teamcall-db
+
+resources:
+ - name: hdi_teamcall-db
+   parameters:
+      config:
+         schema: teamcall_DB
+         database_id: 23cf2f04-e929-4973-938e-2b5963744661 
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container

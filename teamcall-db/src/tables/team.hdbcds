@@ -1,0 +1,10 @@
+namespace teamcall."teamcall-db".tables;
+
+context team {
+
+    /*@@layout{"layoutInfo":{"x":-85,"y":-13.5}}*/
+    entity TEAM {
+        key ID   : Integer;
+            NAME : String(10);
+    };
+};
