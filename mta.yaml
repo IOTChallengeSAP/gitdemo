@@ -1,3 +1,20 @@
 ID: prepdemo
 _schema-version: '3.1'
 version: 0.0.1
+
+modules:
+ - name: prep-db
+   type: hdb
+   path: prep-db
+   requires:
+    - name: hdi_prep-db
+
+resources:
+ - name: hdi_prep-db
+   parameters:
+      config:
+         schema: prepdemo
+         database_id: 23cf2f04-e929-4973-938e-2b5963744661
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
